@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT;
 const app = express();
 
-const todos = [
+let todos = [
     {
       id: 1,
       todo: "Learn API"
