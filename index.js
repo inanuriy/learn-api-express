@@ -1,7 +1,11 @@
+require("dotenv").config();
+
 const express = require("express");
-const app = express();
 const bodyParser = require("body-parser");
 const todos = require("./todos");
+
+const PORT = process.env.PORT;
+const app = express();
 
 // parser application/x-www-from-urlencoded :
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -89,6 +93,6 @@ app.put("/:id", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log("My API is listen on PORT:3001");
+app.listen(PORT, () => {
+  console.log(`My API is listen on ${PORT}`);
 });
