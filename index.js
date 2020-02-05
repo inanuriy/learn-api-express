@@ -96,7 +96,7 @@ app.put("/:id", (req, res) => {
   const { id } = req.params;
   const { todo } = req.body;
 
-  todos.slice(id, 1, { id, todo });
+  todos.splice(id, 1, { id, todo });
 
   res.send({
     message: "Todos updated",
