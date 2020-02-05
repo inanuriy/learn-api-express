@@ -2,10 +2,21 @@ require("dotenv").config();
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const todos = require("./todos");
+// const todos = require("./todos");
 
 const PORT = process.env.PORT;
 const app = express();
+
+const todos = [
+    {
+      id: 1,
+      todo: "Learn API"
+    },
+    {
+      id: 2,
+      todo: "Eat"
+    }
+  ];
 
 // parser application/x-www-from-urlencoded :
 app.use(bodyParser.urlencoded({ extended: true }));
